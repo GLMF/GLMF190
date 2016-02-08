@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html" />
+<link rel="import" href="../../bower_components/paper-material/paper-material.html" />
+
+<link rel="import" href="pages/glmf-page-home.html" />
+<link rel="import" href="pages/glmf-page-page1.html" />
+<link rel="import" href="pages/glmf-page-page2.html" />
+<link rel="import" href="pages/glmf-page-login.html" />
+
+<dom-module id="glmf-pages">
+
+    <template>
+        <iron-pages id={{display}} selected={{selected}} attr-for-selected="data-route">
+                    <paper-material elevation="0" data-route="home">
+                        <glmf-page-home></glmf-page-home>
+                    </paper-material>
+
+                    <paper-material elevation="0" data-route="page1">
+                        <glmf-page-page1></glmf-page-page1>
+                    </paper-material>
+
+                    <paper-material elevation="0" data-route="page2">
+                        <glmf-page-page2></glmf-page-page2>
+                    </paper-material>
+
+                    <paper-material elevation="0" data-route="login">
+                        <glmf-page-login></glmf-page-login>
+                    </paper-material>
+        </iron-pages>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'glmf-pages',
+            properties: {
+                display: String,
+                selected: String,
+            },
+        })();
+    </script>
+
+</dom-module>

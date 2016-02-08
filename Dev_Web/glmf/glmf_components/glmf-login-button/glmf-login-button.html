@@ -1,0 +1,23 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html" />
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html" />
+
+<dom-module id="glmf-login-button">
+
+    <template>
+        <paper-icon-button name="test" icon="lock-outline" on-tap="menuLogin"></paper-icon-button>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'glmf-login-button',
+            properties: {
+                display: String
+            },
+            menuLogin: function () {
+                document.getElementById(this.display).select('login');
+            },
+        })();
+    </script>
+
+</dom-module>
